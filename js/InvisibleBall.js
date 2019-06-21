@@ -1,4 +1,4 @@
-class MovingBall {
+class InvisibleBall {
   // The ball will move from the point (x1,y1) to (x2,y2) at speed and go backward
   constructor(x1, y1, x2, y2, speed, radius) {
     this.x = x1;
@@ -12,13 +12,10 @@ class MovingBall {
   }
   draw(ctx) {
     ctx.save();
-    ctx.fillStyle = "#006600";
-    ctx.lineWidth = 1;
-
     ctx.beginPath();
     ctx.arc(this.x, this.y, this.radius, 0, 2 * Math.PI);
     ctx.fill();
-    ctx.stroke();
+    
     
     ctx.restore();
   }

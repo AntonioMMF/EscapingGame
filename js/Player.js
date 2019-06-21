@@ -5,9 +5,6 @@ class Player {
     this.y = 100;
     this.vx = 0;
     this.vy = 0;
-
-    // this.img = new Image();
-    // this.img.src = `https://publicdomainvectors.org/photos/1420410856.png`;
   }
   draw(ctx) {
     ctx.save();
@@ -34,22 +31,18 @@ class Player {
       this.y = CANVAS_HEIGHT - 95 - this.radius;
     if (player.x + player.radius > CANVAS_WIDTH - 25 && lvl === 1) {
       nextLevel2();
-
-      console.log(" level 2 but", lvl);
     }
     if (player.x + player.radius > CANVAS_WIDTH - 25 && lvl === 2) {
       nextLevel3();
-
-      console.log(" level 3 but", lvl);
-      
     }
     if (player.x + player.radius > CANVAS_WIDTH - 25 && lvl === 3) {
-      endGame();
-
+      nextLevel4();
     }
-    if (player.x + player.radius > CANVAS_WIDTH - 600 && lvl === 4) {
+    if (player.x + player.radius > CANVAS_WIDTH - 25 && lvl === 4) {
+      endGame();
+    }
+    if (player.x + player.radius > CANVAS_WIDTH - 600 && lvl === 5) {
       endGame2();
-
     }
   }
 }
